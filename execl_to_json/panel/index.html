@@ -1,0 +1,114 @@
+<br />
+<div>
+    <ui-section>
+        <div class="header greenColor">选择文件</div>
+        <ui-prop id="ui_prop" name="EXECL 文件路径" tooltip="选择 ECECL 的根目录">
+            <ui-input id="ui_input" class="flex-1"  readonly v-value="execlPath"></ui-input>
+            <ui-button @confirm="onBtnOpenExeclPath"> 选择 </ui-button>
+        </ui-prop>
+        <ui-prop id="ui_prop" name="JSON 保存路径" tooltip="选择 JSON 保存路径">
+            <ui-input id="ui_input" class="flex-1"  readonly v-value="saveJsonPath"></ui-input>
+            <ui-button @confirm="onBtnOpenSavaJsonPath"> 选择 </ui-button>
+        </ui-prop>
+     </ui-section>
+</div>
+
+<br />
+<div>
+    <ui-section>
+        <div class="header greenColor">工作表</div>
+        <div class="wrapper center layout horizontal excelBoard">
+            <div class="box flex-1">
+                <ui-checkbox v-on:change="onBtnAllSheet" checked>序号</ui-checkbox>
+            </div>
+            <div class="box flex-3"> Excel文件</div>
+            <div class="box flex-3"> 工作表名称</div>
+        </div>
+        <div class="" style="height: 200px;margin-left: 0px; margin-right: 0px;">
+            <div id="view" class="scroll" style="padding-right: 0px;padding-bottom: 0px;height: 200px;">
+                <div class="section" id="section" style="margin-bottom: 0px; padding-bottom: 0px;">
+                    <ui-box-container class="shadow height-limited"
+                                        style="height: auto; min-height: 200px;"
+                                        id="container">
+                        <div  v-for="(index,item) in excelFileArr">
+
+                            <div class="wrapper layout horizontal center"
+                                style="width: 100%;height: 20px;
+                                background-color: #252525;"
+                                onmouseover="this.style.backgroundColor='#505050'"
+                                onmouseout="this.style.backgroundColor='#252525'">
+                                <div class="box flex-1">
+                                    <ui-checkbox v-bind:checked="item.isUse"
+                                                v-on:change="onBtnOneSheet">
+                                        {{index}}
+                                    </ui-checkbox>
+                                </div>
+                                <div class="box flex-3"> {{item.name}}</div>
+                                <div class="box flex-3"> {{item.sheet}}</div>
+                                <div class="btnLook"> 
+                                    <ui-button  bb="{{index}}"   v-on:confirm="onBtnLookJson"> 查看 </ui-button>
+                                </div>
+                            </div>
+                            <hr style="margin: 1px 0 1px 0">
+
+                        </div>
+                    </ui-box-container>
+                </div>
+            </div>
+        </div>
+    </ui-section>
+</div>
+
+<br />
+
+<div> 
+    <ui-section>
+        <div class="header greenColor">表的数据</div>
+
+        <div class="wrapper layout horizontal center" style="width: 100%;height: 20px; background-color: #252525;"> 
+            <div class="box flex-3">表名:   {{excelName}} </div>  <div class="box flex-3"> 工作薄:   {{sheetName}} </div>
+        </div>
+        <div class="" style="height: 200px;margin-left: 0px; margin-right: 0px;">
+            <div id="view" class="scroll" style="padding-right: 0px;padding-bottom: 0px;height: 200px;">
+                <div class="section" id="section" style="margin-bottom: 0px; padding-bottom: 0px;">
+                    <ui-box-container class="shadow height-limited"
+                                        style="height: auto; min-height: 200px;"
+                                        id="container">
+                        <div track-by="$index" v-for="item in excelData">
+
+                                <div class="wrapper layout horizontal center"
+                                        style="width: 100%;height: 20px;
+                                        background-color: #252525;"
+                                        onmouseover="this.style.backgroundColor='#505050'"
+                                        onmouseout="this.style.backgroundColor='#252525'">
+                    
+                                        <div class="my_list_item" v-for="item2 in item" track-by="$index" style=""> {{item2}} </div>
+                                
+                                </div>
+                                <hr style="margin: 1px 0 1px 0">
+                        </div>
+                    </ui-box-container>
+                </div>
+            </div>
+        </div>
+     </ui-section>
+</div>
+
+<br />
+<div>
+    <ui-section>
+        <div class="header greenColor">生成JSON的配置表</div>
+        <div>
+            <ui-checkbox v-bind:checked="isCompress" v-on:change="onBtnCompress" checked>压缩</ui-checkbox>
+            <ui-checkbox v-bind:checked="isTrope" v-on:change="onBtnTrope" disabled>转义</ui-checkbox>
+            <ui-checkbox v-bind:checked="isCompressAndTrop" v-on:change="onBtnCompressAndTrop"  disabled>压缩并转义</ui-checkbox>
+        </div>
+     <ui-section>
+</div>
+
+<br />
+<div class="my_float">
+    <ui-button class="green" @confirm="onBtnCreateAllJSON"> 生成 </ui-button>
+</div>
+
+

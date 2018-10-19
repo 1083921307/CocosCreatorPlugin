@@ -1,0 +1,26 @@
+{
+  "name": "artistic_font",
+  "version": "0.0.1",
+  "description": "The package template for getting started.",
+  "author": "虣虣",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:MAIN_MENU.package.title/artistic_font": {
+      "message": "artistic_font:open"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "制作BMFont艺术字体",
+    "width": 400,
+    "height": 150
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
+}

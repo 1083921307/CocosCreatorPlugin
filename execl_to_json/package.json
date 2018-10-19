@@ -1,0 +1,26 @@
+{
+  "name": "execl_to_json",
+  "version": "0.0.1",
+  "description": "The package template for getting started.",
+  "author": "Cocos Creator",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:MAIN_MENU.package.title/execl_to_json": {
+      "message": "execl_to_json:open"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "Execl转JSON",
+    "width": 400,
+    "height": 300
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "node-xlsx": "^0.12.1"
+  }
+}

@@ -1,0 +1,22 @@
+<div> 
+    <br />
+    <ui-prop id="ui_prop" name="PNG 路径" tooltip="将生产的 PNG 配置导入到项目中">
+        <ui-input id="ui_input" class="flex-1"  readonly v-value="pngPath"></ui-input>
+        <ui-button @confirm="onBtnOpenPngPath"> 选择 </ui-button>
+    </ui-prop>
+    <br />
+    <ui-prop tabindex="-1" name="FONT 路径" tooltip="输出生成的路径">
+        <ui-input class="flex-1" readonly v-value="fontPath"></ui-input>
+        <ui-button @confirm="onBtnOpenFontPath"> 打开 </ui-button>
+    </ui-prop>
+    <br />
+    <ui-prop name="字体名称" tooltip="输出生成字体的名称">
+        <ui-input class="flex-1"  v-value="fontName"></ui-input>
+    </ui-prop>
+    <br />
+
+    <div id= "front"> 
+         <ui-button @confirm="onBtnCreatePng"> 生成 PNG </ui-button>
+         <ui-button @confirm="onBtnCreateFont"> 生成 FONT </ui-button>
+    </div
+</div>
