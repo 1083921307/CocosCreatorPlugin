@@ -7,3 +7,8 @@
 ## execl_to_json(exec转json)
 
 ![""](./image/execl_to_json.png)
+
+
+## prefab-ref-res(预制体引用纹理查询)
+
+![""](./image/prefab-ref-res.png)

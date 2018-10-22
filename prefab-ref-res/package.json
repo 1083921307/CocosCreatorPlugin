@@ -1,0 +1,26 @@
+{
+  "name": "prefab-ref-res",
+  "version": "0.0.1",
+  "description": "The package template for getting started.",
+  "author": "Cocos Creator",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:prefab-ref-res.menu_title/i18n:prefab-ref-res.title": {
+      "message": "prefab-ref-res:open"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "预制体资源使用查询",
+    "width": 400,
+    "height": 300
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
