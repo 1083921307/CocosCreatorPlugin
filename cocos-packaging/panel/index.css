@@ -1,0 +1,30 @@
+.tag{
+	width:500px;
+	height:200px;
+	margin:0 auto;
+}
+.regular-radio {
+	display: none;
+}
+
+.regular-radio + label {
+	-webkit-appearance: none;
+	background-color: #474747;
+	border: 1px solid #aaa;
+	padding: 9px;
+	border-radius:50px;
+	display: inline-block;
+	position: relative;
+}
+
+.regular-radio:checked + label:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background:#47d9bf;
+	box-shadow:0px 0px 5px 0px #47d9bf;
+	left: 3px;
+}

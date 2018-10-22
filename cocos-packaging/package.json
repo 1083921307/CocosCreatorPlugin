@@ -1,0 +1,19 @@
+{
+  "name": "cocos-packaging",
+  "version": "0.0.1",
+  "description": "cocos-packaging",
+  "author": "lxx",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:cocos-packaging.menu_title/i18n:cocos-packaging.title": {
+      "message": "cocos-packaging:open"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "cocos-packaging",
+    "width": 400,
+    "height": 300
+  }
+}

@@ -5,7 +5,7 @@
   "author": "Cocos Creator",
   "main": "main.js",
   "main-menu": {
-    "i18n:MAIN_MENU.package.title/execl_to_json": {
+    "i18n:execl_to_json.menu_title/i18n:execl_to_json.title": {
       "message": "execl_to_json:open"
     }
   },

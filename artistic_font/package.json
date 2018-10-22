@@ -5,7 +5,7 @@
   "author": "虣虣",
   "main": "main.js",
   "main-menu": {
-    "i18n:MAIN_MENU.package.title/artistic_font": {
+    "i18n:artistic_font.menu_title/i18n:artistic_font.title": {
       "message": "artistic_font:open"
     }
   },
